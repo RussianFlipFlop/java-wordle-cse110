@@ -1,3 +1,11 @@
+/*-------------------------------------------------------------------------
+// AUTHOR: Group 16
+// FILENAME: Dictionary.java
+// SPECIFICATION: Acts as the class that sorts words and definitions from text files into an array.
+// FOR: CSE 110
+//----------------------------------------------------------------------*/
+
+
 import java.io.File;
 
 import java.util.Scanner;
@@ -17,8 +25,8 @@ public class Dictionary
 	public Dictionary() throws Exception
 	{
 		//Create file objects that go into directory. Creates scanners that will process txt files.
-		words = new File(System.getProperty("user.dir") + "/words.txt");
-		definitions = new File(System.getProperty("user.dir") +"/definitions.txt");
+		words = new File(System.getProperty("user.dir") + "/src/words.txt");
+		definitions = new File(System.getProperty("user.dir") +"/src/definitions.txt");
 		Scanner scanWord = new Scanner(words);
 		Scanner scanDef1 = new Scanner(definitions);
 	
@@ -39,7 +47,7 @@ public class Dictionary
 		}
 		
 		//needed to create two separate files for the definitions because the whole file was too big for the scanner, not really sure why.
-		definitions = new File(System.getProperty("user.dir") + "/definitions2.txt");
+		definitions = new File(System.getProperty("user.dir") + "/src/definitions2.txt");
 		Scanner scanDef2 = new Scanner(definitions);
 		while(scanDef2.hasNextLine())
 		{
